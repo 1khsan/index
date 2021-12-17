@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chat Box</title>
+	</head>
+	<script>
+		let penampung = "";
+		function hasil() {
+			let isi = document.getElementById("isi");
+			let input = document.getElementById("input");
+
+			penampung += input.value + "<br>";
+			isi.innerHTML = penampung;
+			input.value = "";
+		}
+	</script>
+	<body>
+		<div
+			id="isi"
+			style="height: 500px; width: 300px; border: 1px solid black"
+		></div>
+		<div style="display: flex">
+			<input type="text" id="input" style="width: 250px" />
+			<button onclick="hasil()">kirim</button>
+		</div>
+	</body>
+</html>
